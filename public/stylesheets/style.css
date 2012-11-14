@@ -1,0 +1,39 @@
+body {
+  height: 100%;
+  /* background: #2a4263 url('/images/background.png') top repeat-x; */
+  background: #eeeeee;
+  font: normal 14px/1.4 "Helvetica Neue","HelveticaNeue",Helvetica,Arial,sans-serif;
+  margin: 0px;
+  padding: 50px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+
+/* chat bubbles */
+.gt { height: 24px; }
+.gnw { width: 36px; background: url('/images/bubble-green-nw.png') no-repeat right top; }
+.gn { background: url('/images/bubble-green-n.png') repeat-x; }
+.gne { width: 36px; background: url('/images/bubble-green-ne.png') no-repeat left top; }
+.gw { width: 36px; background: url('/images/bubble-green-w.png') repeat-y right; }
+.gc { background:#78d850; }
+.ge { width: 36px; background: url('/images/bubble-green-e.png') repeat-y left; }
+.gsw { width: 36px; background: url('/images/bubble-green-sw.png') no-repeat right bottom; }
+.gs { background: url('/images/bubble-green-s.png') repeat-x; }
+.gse { width: 36px; background: url('/images/bubble-green-se.png') no-repeat left bottom; }
+.gb { height: 27px; }
+
+.bt { height: 24px; }
+.bnw { width: 36px; background: url('/images/bubble-blue-nw.png') no-repeat right top; }
+.bn { background: url('/images/bubble-blue-n.png') repeat-x; }
+.bne { width: 36px; background: url('/images/bubble-blue-ne.png') no-repeat left top; }
+.bw { width: 36px; background: url('/images/bubble-blue-w.png') repeat-y right; }
+.bc { background:#9eccfe; }
+.be { width: 36px; background: url('/images/bubble-blue-e.png') repeat-y left; }
+.bsw { width: 36px; background: url('/images/bubble-blue-sw.png') no-repeat right bottom; }
+.bs { background: url('/images/bubble-blue-s.png') repeat-x; }
+.bse { width: 36px; background: url('/images/bubble-blue-se.png') no-repeat left bottom; }
+.bb { height: 28px; }

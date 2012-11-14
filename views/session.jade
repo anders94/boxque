@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  div.navbar.navbar-fixed-top.navbar-inverse
+    div.navbar-inner
+      div.container
+        a.brand(href='/')
+          img(src='/images/logo.png', width='71', height='25')
+
+  div.navbar.navbar-fixed-bottom.navbar-inverse
+    div.navbar-inner
+      div.container
+        form.form#control(onsubmit="return false;")
+          div.input-append
+            input(name='input_data', placeholder=' Type something...').span9
+            button(onClick='post();').btn.btn-primary Send
+
+  div.container#chat
+  div#end
+
+  script(type='text/javascript')
+    var user = 'anonymous';
+
+    function post() {
+      var o = new Object();
+      o.user = user;
+      o.message = $('#control input[name=input_data]').val();
+      add( true, o.message );
+      socket.emit('post',JSON.stringify(o));
+      $('#control input[name=input_data]').val('');
+
+    }
+
+    // socket.io
+    var socket = io.connect();
+
+    socket.on('id', function(data) {
+        user = data.user;
+      });
+
+    socket.on('message', function (data) {
+        var o = JSON.parse(data);
+        if ( o.user != user )
+          add( false, o.message );
+      });
+
+    socket.emit('sub', '#{key}');
